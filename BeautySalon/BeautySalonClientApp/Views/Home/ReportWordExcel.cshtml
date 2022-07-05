@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "OrdersServiceReport";
+}
+<div class="text-center">
+    <h5 class="display-4" style="font-size: 30px;">Список услуг по выбранным заказам</h5>
+</div>
+
+<div class="text-center">
+    <h5 class="display-4" style="font-size: 24px; margin-bottom: 30px">Выберите заказы для отчета:</h5>
+</div>
+
+<form method="post">
+<div class="row">
+        <div class="col-4" style="align-self:center" >Заказы:</div>
+        <div class="col-8">
+            @foreach (var item in ViewBag.Orders)
+                {
+                    <input type="checkbox" id="ordersId" name="ordersId" multiple="multiple" value="@item.Id" /> @item.OrderName<Br>
+                }
+        </div>
+        <div class="row">
+        <div class="col-4"></div>
+        <div class="col-8">
+            <input type="submit" value="Word" class="btn btn-secondary" asp-action="CreateReportOrderServiceToWordFile" style="margin-top:20px; padding-right: 40px; padding-left: 40px"/>
+            <input type="submit" value="Excel" class="btn btn-secondary" asp-action="CreateReportOrderServiceToExcelFile" style="margin-top:20px; padding-right: 40px; padding-left: 40px;"/>
+        </div>
+    </div>
+</div>
+</form>

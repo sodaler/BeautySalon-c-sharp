@@ -1,0 +1,31 @@
+﻿<Window x:Class="BeautySalonViewEmployee.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeautySalonViewEmployee"
+        mc:Ignorable="d"
+       
+        FontFamily="Rubik"
+        Title="Главная" Height="500" Width="850"
+        Background="LightCyan"
+        UseLayoutRounding="True">
+    <Grid Margin="0,0,0,-6">
+        <Image Width="300" Margin="284,4,266,-4">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="300"  
+     UriSource="Resources\beauty.png" />
+            </Image.Source>
+        </Image>
+        <Label Margin="284,21,225,393" FontSize="30">Добро пожаловать!</Label>
+        <Button x:Name="menuItemService" Content="Услуги" Click="menuItemService_Click" BorderThickness="3" BorderBrush="black" Background="LightSalmon" Margin="14,62,672,358"/>
+        <Button x:Name="menuItemCosmetic" Content="Косметика" Click="menuItemCosmetic_Click"  BorderThickness="3" BorderBrush="black" Background="LightSalmon" Margin="12,157,674,265" />
+        <Button x:Name="menuItemLaborCost" Content="Трудозатраты" Click="menuItemLaborCost_Click"  BorderThickness="3" BorderBrush="black" Background="LightSalmon" Margin="14,255,676,171"/>
+        <Button x:Name="menuItemGetList" Content="Сохранить word excel" Click="menuItemGetList_Click"  BorderThickness="3" BorderBrush="black" Background="LightSalmon" Margin="688,89,10,332"/>
+        <Button x:Name="menuItemReport" Content="Сохранить PDF + почта" Click="menuItemReport_Click" BorderThickness="3" BorderBrush="black" Background="LightSalmon" Margin="688,206,10,214" />
+        <Button x:Name="menuItemBindService" Content="Привязать услугу" Click="menuItemBindService_Click" BorderThickness="3" BorderBrush="black" Background="LightSalmon" Margin="12,348,678,72" />
+
+        <Button x:Name="menuItemStatistic" Content="Статистика" Click="menuItemStatistic_Click" BorderThickness="3" BorderBrush="black" Background="LightSalmon" Margin="686,327,10,94" />
+
+    </Grid>
+</Window>

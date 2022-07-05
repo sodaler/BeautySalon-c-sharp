@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Update Procedure";
+}
+<div class="text-center">
+    <h2 class="display-4">Изменение процедуры</h2>
+</div>
+<form method="post">
+    <div class="row">
+        <div class="col-4">Название процедуры:</div>
+        <div class="col-8"><input type="text" name="procedureName" id="procedureName" value="@ViewBag.Procedure.ProcedureName" size="35" /></div>
+    </div>
+    <div class="row">
+        <div class="col-4">Стоимость:</div>
+        <div class="col-8"><input type="text" name="procedurePrice" id="procedurePrice" value="@ViewBag.Procedure.ProcedurePrice" /></div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Привязанные заказы
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.Procedure.ProcedureOrders)
+            {
+                <tr>
+                    <td>
+                        @item.Value
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-8">
+            <input type="submit" value="Сохранить изменения" class="btn btn-secondary" />
+             <a type="button" asp-action="Procedure" class="btn btn-secondary">Отмена</a>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Update Estimate";
+}
+<div class="text-center">
+    <h2 class="display-4">Изменение оценки</h2>
+</div>
+<form method="post">
+    <div class="row">
+        <div class="col-4">Оценка:</div>
+        <div class="col-8"><input type="text" name="estimateRate" id="estimateRate" value="@ViewBag.Estimate.EstimateRate" /></div>
+    </div>
+    <div class="row">
+        <div class="col-4">Комментарий:</div>
+        <div class="col-8"><input type="text" name="comment" id="comment"/></div>
+    </div>
+     <div class="row">
+        <div class="col-4">Процедура:</div>
+        <div class="col-8">
+            <select id="procedureId" name="procedureId" class="form-control" asp-items="@(new SelectList(@ViewBag.Procedures,"Id", "ProcedureName"))"></select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-8">
+            <input type="submit" value="Сохранить изменения" class="btn btn-secondary" />
+            <a type="button" asp-action="Estimate" class="btn btn-secondary">Отмена</a>
+        </div>
+    </div>
+</form>
