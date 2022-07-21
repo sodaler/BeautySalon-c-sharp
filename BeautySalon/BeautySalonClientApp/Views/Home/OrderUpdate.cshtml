@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Update Order";
+}
+<div class="text-center">
+    <h2 class="display-4">Изменение заказа</h2>
+</div>
+<form method="post">
+    <div class="row">
+        <div class="col-4">Название:</div>
+        <div class="col-8"><input type="text" name="orderName" id="orderName" value="@ViewBag.Order.OrderName" size="35" /></div>
+    </div>
+    <div class="row">
+        <div class="col-4">Цена:</div>
+        <div class="col-8"><input type="text" name="price" id="price" value="@ViewBag.Order.Price" /></div>
+    </div>
+    <div class="row">
+        <div class="col-4">Косметика:</div>
+        <div class="col-8">
+            <select id="cosmeticsId" name="cosmeticsId" multiple="multiple" class="form-control" asp-items="@(new SelectList(@ViewBag.Cosmetics,"Id", "CosmeticName"))"></select>
+        </div>
+    </div> 
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Косметика
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.Order.OrderCosmetics)
+            {
+                <tr>
+                    <td>
+                        @item.Value
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Процедура
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.OrderProcedures)
+            {
+                <tr>
+                    <td>
+                        @item.ProcedureName
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-8">
+            <input type="submit" value="Сохранить изменения" class="btn btn-secondary" />
+            <a type="button" asp-action="Order" class="btn btn-secondary">Отмена</a>
+        </div>
+    </div>
+</form>

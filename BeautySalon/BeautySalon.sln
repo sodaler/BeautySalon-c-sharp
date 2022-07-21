@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeautySalonBusinessLogic", "BeautySalonBusinessLogic\BeautySalonBusinessLogic.csproj", "{87504827-D50B-4102-85BD-FB3443E5F3D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeautySalonClientApp", "BeautySalonClientApp\BeautySalonClientApp.csproj", "{F3A71082-43A6-452C-9F5B-7ACFF26E748A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeautySalonContracts", "BeautySalonContracts\BeautySalonContracts.csproj", "{2B5C914D-D616-4E09-9BC4-F20C26392CF4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeautySalonDatabaseImplement", "BeautySalonDatabaseImplement\BeautySalonDatabaseImplement.csproj", "{32C37086-B131-43E8-8F72-7E9CCFCD60CC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeautySalonRestApi", "BeautySalonRestApi\BeautySalonRestApi.csproj", "{48955B33-D20E-4211-A727-52ABD26139EB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeautySalonViewEmployee", "BeautySalonViewEmployee\BeautySalonViewEmployee.csproj", "{9B5771C2-AD2F-4ADD-A87B-8134A7E20460}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87504827-D50B-4102-85BD-FB3443E5F3D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87504827-D50B-4102-85BD-FB3443E5F3D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87504827-D50B-4102-85BD-FB3443E5F3D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87504827-D50B-4102-85BD-FB3443E5F3D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3A71082-43A6-452C-9F5B-7ACFF26E748A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3A71082-43A6-452C-9F5B-7ACFF26E748A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3A71082-43A6-452C-9F5B-7ACFF26E748A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3A71082-43A6-452C-9F5B-7ACFF26E748A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B5C914D-D616-4E09-9BC4-F20C26392CF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B5C914D-D616-4E09-9BC4-F20C26392CF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B5C914D-D616-4E09-9BC4-F20C26392CF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B5C914D-D616-4E09-9BC4-F20C26392CF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32C37086-B131-43E8-8F72-7E9CCFCD60CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32C37086-B131-43E8-8F72-7E9CCFCD60CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32C37086-B131-43E8-8F72-7E9CCFCD60CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32C37086-B131-43E8-8F72-7E9CCFCD60CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48955B33-D20E-4211-A727-52ABD26139EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48955B33-D20E-4211-A727-52ABD26139EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48955B33-D20E-4211-A727-52ABD26139EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48955B33-D20E-4211-A727-52ABD26139EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B5771C2-AD2F-4ADD-A87B-8134A7E20460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B5771C2-AD2F-4ADD-A87B-8134A7E20460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B5771C2-AD2F-4ADD-A87B-8134A7E20460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B5771C2-AD2F-4ADD-A87B-8134A7E20460}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBEA0F9C-659F-4C37-BC35-A4CC9F5B7215}
+	EndGlobalSection
+EndGlobal

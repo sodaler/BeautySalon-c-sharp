@@ -1,0 +1,18 @@
+﻿<Window x:Class="BeautySalonViewEmployee.SendMailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeautySalonViewEmployee"
+        mc:Ignorable="d"
+         Background="AntiqueWhite"
+        FontFamily="Rubik"
+        Title="Отправка на почту" Height="200" Width="400">
+    <Grid>
+        <Label Content="Отправить на" HorizontalAlignment="Left" Margin="18,18,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxEmail" HorizontalAlignment="Left" Margin="18,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="25"/>
+        <Button x:Name="buttonSend" Background="LightCyan" Content="Отправить отчёт" HorizontalAlignment="Left" Margin="18,112,0,0" VerticalAlignment="Top" Width="118" Height="36" Click="buttonSend_Click"/>
+        <Button x:Name="buttonCancel" Background="LightCyan" Content="Назад" HorizontalAlignment="Left" Margin="181,121,0,0" VerticalAlignment="Top" Width="82" Height="18" Click="buttonCancel_Click"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Create Procedure";
+}
+<div class="text-center">
+    <h2 class="display-4">Создание процедуры</h2>
+</div>
+<form method="post">
+    <div class="row">
+        <div class="col-4">Название процедуры:</div>
+        <div class="col-8"><input type="text" name="procedureName" id="procedureName" size="35" /></div>
+    </div>
+    <div class="row">
+        <div class="col-4">Стоимость:</div>
+        <div class="col-8"><input type="text" name="procedurePrice" id="procedurePrice" /></div>
+    </div>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-8">
+            <input type="submit" value="Создать" class="btn btn-secondary" />
+            <a type="button" asp-action="Procedure" class="btn btn-secondary">Отмена</a>
+        </div>
+    </div>
+</form>

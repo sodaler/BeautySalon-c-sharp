@@ -1,0 +1,76 @@
+﻿@using BeautySalonContracts.ViewModels
+
+@model List<EstimateViewModel>
+@{
+    ViewData["Title"] = "Estimates";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Оценки</h1>
+</div>
+
+<div class="text-center">
+    @{
+        if (Model == null)
+        {
+            <h3 class="display-4">Авторизируйтесь</h3>
+            return;
+        }
+        <p>
+            <a class="btn btn-secondary" asp-action="EstimateCreate">Создать оценку</a>
+        </p>
+        <table id="listingTable" class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Номер
+                    </th>
+                    <th>
+                        Оценка
+                    </th>
+                    <th>
+                        Комментарий
+                    </th>
+                    <th>
+                        Дата выставления оценки
+                    </th>
+                    <th>
+                        Процедура
+                    </th>
+                    <th>
+                        Изменение оценки
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EstimateRate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Comment)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateEstimate)
+                        </td>
+                         <td>
+                            @Html.DisplayFor(modelItem => item.ProcedureName)
+                        </td>
+                        <td>
+                            <a class="btn btn-secondary" asp-action="EstimateUpdate"
+                            asp-route-estimateId="@item.Id" asp-route-estimateRate="@item.EstimateRate" 
+                            asp-route-procedureId="@item.ProcedureId">Изменить</a>
+
+                            <a class="btn btn-secondary" asp-action="EstimateDelete" asp-route-estimateId="@item.Id">Удалить</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>

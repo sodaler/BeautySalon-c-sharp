@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "OrdersServiceReport";
+}
+
+<div class="text-center">
+    <h5 class="display-4" style="font-size: 30px;">Отчёт по заказам</h5>
+</div>
+
+<form method="post">
+        <p>
+            <label for="date">С </label>
+            <input type="date" id="dateFrom" name="dateFrom"/>
+            <label for="date">По </label>
+            <input type="date" id="dateTo" name="dateTo"/>
+        </p>
+        <p>
+            <input type="submit" asp-route-dateFrom="dateFrom" asp-route-dateTo="dateTo" asp-action="ReportGetOrdersPDF" value="Вывести на форму"/>
+            <input type="submit" asp-route-dateFrom="dateFrom" asp-route-dateTo="dateTo" asp-action="SendReportOnMail" value="Отправить на почту" />            
+        </p>
+        @if(ViewBag.Report != null){
+            string period = ViewBag.Period;
+            <div style="text-align:center">
+            <label style="font-weight:bold">@period</label>
+            </div>
+        <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Название
+                </th>
+                <th>
+                    Дата создания
+                </th>
+                <th>
+                    Процедура
+                </th>
+                <th>
+                    Услуги
+                </th>
+            </tr>
+        </thead>
+        <tbody>            
+            @foreach (var item in ViewBag.Report)
+            {
+                @for (int i = 0; i < item.ProcedureServices.Count; i++)
+                {
+                    if(i == 0)
+                    {
+                        <tr>
+                        <td>
+                            @item.OrderName
+                        </td>
+                        <td>
+                            @item.CreateDate
+                        </td>
+                        <td>
+                            @item.ProcedureServices[i].Item1.ProcedureName
+                        </td>
+                            @{string services = "";}
+                            @foreach(var cur in @item.ProcedureServices[i].Item2)
+                            {
+                                    services += cur.ServiceName + ", ";
+                            }                            
+                        <td>
+                            @services
+                        </td>
+                    </tr>
+                    }
+                    else
+                    {
+                        <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            @item.ProcedureServices[i].Item1.ProcedureName
+                        </td>
+                            @{string services = "";}
+                            @foreach(var cur in @item.ProcedureServices[i].Item2)
+                            {
+                                services += cur.ServiceName + ", ";
+                            }
+                        <td>
+                            @services
+                        </td>
+                    </tr>
+                    }
+                }                    
+            }         
+        </tbody>
+    </table>
+    }      
+</form>

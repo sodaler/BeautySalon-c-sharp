@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="bankLogo.png" />
+    <None Remove="Resources\beauty.png" />
+    <None Remove="Resources\Report.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Report.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BoldReports.WPF" Version="4.1.79" />
+    <PackageReference Include="DotNetProjects.WpfToolkit.DataVisualization" Version="6.0.87" />
+    <PackageReference Include="Unity" Version="5.11.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <ProjectReference Include="..\BeautySalonBusinessLogic\BeautySalonBusinessLogic.csproj" />
+    <ProjectReference Include="..\BeautySalonContracts\BeautySalonContracts.csproj" />
+    <ProjectReference Include="..\BeautySalonDatabaseImplement\BeautySalonDatabaseImplement.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\bankLogo.png" />
+    <Resource Include="Resources\beauty.png" />
+  </ItemGroup>
+
+</Project>

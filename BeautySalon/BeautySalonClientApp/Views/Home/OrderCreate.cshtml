@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Create Order";
+}
+<div class="text-center">
+    <h2 class="display-4">Создание заказа</h2>
+</div>
+<form method="post">
+    <div class="row">
+        <div class="col-4">Название:</div>
+        <div class="col-8"><input type="text" name="OrderName" id="OrderName" size="35" /></div>
+    </div>
+    <div class="row">
+        <div class="col-4">Цена:</div>
+        <div class="col-8"><input type="text" name="price" id="price" /></div>
+    </div>
+    <div class="row">
+        <div class="col-4">Косметика:</div>
+        <div class="col-8">
+            <select id="cosmeticsId" name="cosmeticsId" multiple="multiple" class="form-control" asp-items="@(new SelectList(@ViewBag.Cosmetics,"Id", "CosmeticName"))"></select>
+        </div>
+    </div>    
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-8">
+            <input type="submit" value="Создать" class="btn btn-secondary" />
+            <a type="button" asp-action="Order" class="btn btn-secondary">Отмена</a>
+        </div>
+    </div>
+</form>
